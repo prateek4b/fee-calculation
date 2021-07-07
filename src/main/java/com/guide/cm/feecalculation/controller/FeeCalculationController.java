@@ -88,8 +88,8 @@ public class FeeCalculationController {
             feeEntryDb.setReceiptNo(feeEntry.getReceiptNo());
         }
 
-        if (feeEntry.getYear() != 0L) {
-            feeEntryDb.setYear(feeEntry.getYear());
+        if (feeEntry.getAssessMentYear() != null) {
+            feeEntryDb.setAssessMentYear(feeEntry.getAssessMentYear());
         }
 
         feeEntryRepository.save(feeEntryDb);

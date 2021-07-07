@@ -1,6 +1,7 @@
 package com.guide.cm.feecalculation.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.apache.commons.lang.StringUtils;
 
 import javax.persistence.*;
 
@@ -19,7 +20,7 @@ public class FeeEntry {
     private String feeHead;
     private String date;
     private long receiptNo;
-    private int year;
+    private String assessMentYear;
     private String gstNo;
 
     public String getGstNo() {
@@ -86,11 +87,12 @@ public class FeeEntry {
         this.receiptNo = receiptNo;
     }
 
-    public int getYear() {
-        return year;
+
+    public String getAssessMentYear() {
+        return assessMentYear;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setAssessMentYear(String assessMentYear) {
+        this.assessMentYear = assessMentYear;
     }
 }
